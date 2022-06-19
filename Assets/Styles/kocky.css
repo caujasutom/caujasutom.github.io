@@ -42,13 +42,17 @@ div.container p {
   text-align: justify;
   color: white;
 }
+div.kocky {
+  display: grid;
+  justify-items: center;
+}
 div.kocka {
   width: 90%;
-  background-color: white;
-  padding: 2.5%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  background-color: white;
+  padding: 2.5%;
   box-shadow: 5px 5px 15px -5px #000000;
 }
 div.kocka > img {
@@ -68,16 +72,9 @@ div.kocka div.informace {
 div.informace p {
   margin: 1%;
 }
-div.kocka_content {
-  height: 100vh;
-  width: 100%;
-}
 @media only screen and (max-width: 1215px) {
   div.kocka {
     width: 75%;
-  }
-  div.kocka:first-child {
-    margin-top: 10%;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -100,5 +97,11 @@ div.kocka_content {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+  }
+  div.kocky {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20em;
   }
 }
