@@ -60,7 +60,6 @@ div.navbar ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0;
   padding: 0;
 }
 div.navbar li {
@@ -69,7 +68,6 @@ div.navbar li {
   display: flex;
   align-items: center;
   justify-content: left;
-  list-style: none;
 }
 div.navbar li > * {
   margin: 0 0.5em 0 0.5em;
@@ -147,7 +145,7 @@ footer {
 @media only screen and (max-width: 1000px) {
   body,
   html {
-    scroll-padding: 5em;
+    scroll-padding: 5rem;
   }
   div.navbar {
     z-index: 90;
@@ -173,6 +171,7 @@ footer {
   div.navbar img#logo {
     width: 75px;
     height: 75px;
+    margin: 2rem;
   }
   .hamburger-menu {
     margin: 2rem;
@@ -195,10 +194,13 @@ footer {
   }
   div.container {
     height: 100vh;
-    display: grid;
-    backdrop-filter: blur(100px);
   }
   div.container2 {
-    align-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
   }
 }
