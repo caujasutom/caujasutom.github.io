@@ -1,0 +1,29 @@
+section.main::before {
+  background-image: url("../Obrazky/Kocky/kocka_4.jpg");
+}
+div.content {
+  width: 80%;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  flex-wrap: unset;
+}
+div.content:before,
+div.content:after {
+  width: 150px;
+  height: 150px;
+  content: "";
+  position: absolute;
+}
+div.content:before {
+  border-top: 10px solid var(--primarnibarva);
+  border-left: 10px solid var(--primarnibarva);
+  top: 0;
+  left: 0;
+}
+div.content:after {
+  border-right: 10px solid var(--primarnibarva);
+  border-bottom: 10px solid var(--primarnibarva);
+  bottom: 0;
+  right: 0;
+}

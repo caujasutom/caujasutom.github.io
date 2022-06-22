@@ -1,25 +1,7 @@
-div.container {
-  overflow: hidden;
-  position: relative;
+section.main::before {
+  background-image: url("../Obrazky/Kocky/kocka_3.jpg");
 }
-div.container::before {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../Obrazky/Kocky/1.jpg");
-  filter: brightness(50%);
-}
-div.container div.text {
-  margin: 5% auto 5% auto;
-  width: 70%;
-  text-align: center;
-}
+
 @keyframes animace_tlacitko {
   0% {
     transform: translateY(0);
@@ -28,80 +10,27 @@ div.container div.text {
     transform: translateY(-25px);
   }
 }
-a.tlacitko img {
-  margin: 35% 0 0 0;
-  animation: animace_tlacitko 1s infinite alternate;
-  width: 10%;
-  filter: brightness(0) invert(1);
-}
-div.container div.text h1 {
+section.main div.text h1 {
   font-size: 5em;
   color: white;
 }
-div.container p {
+section.main p {
   text-align: justify;
   color: white;
 }
-div.kocky {
-  display: grid;
-  justify-items: center;
-}
-div.kocka {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: white;
-  padding: 2.5%;
-  box-shadow: 5px 5px 15px -5px #000000;
-}
-div.kocka > img {
-  margin: 1%;
-}
-div.kocka img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+div.content img {
   box-shadow: -15px -15px 0px 1px var(--sekundarnibarva);
 }
-div.kocka div.informace {
-  width: 50%;
-  display: grid;
-  align-items: center;
-}
-div.informace p {
-  margin: 1%;
-}
 @media only screen and (max-width: 1215px) {
-  div.kocka {
+  div.content {
     width: 75%;
   }
 }
 @media only screen and (max-width: 1000px) {
-  div.container::before {
-    background-image: url("../Obrazky/Kocky/284601021_563930951966887_6566867064690328689_n.jpg");
-  }
-  div.container div.text h1 {
-    margin: 30% 0 0 0;
-    font-size: 2em;
-    color: white;
-  }
-  a.tlacitko img {
-    margin: 80% 0 0 0;
-    animation: animace_tlacitko 1s infinite alternate;
-    width: 10%;
-    filter: brightness(0) invert(1);
-  }
-  div.kocka {
-    width: 80%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-  div.kocky {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20em;
+  div.content img {
+    width: 200px;
+    height: 225px;
+    object-fit: cover;
+    box-shadow: -15px -15px 0px 1px var(--sekundarnibarva);
   }
 }

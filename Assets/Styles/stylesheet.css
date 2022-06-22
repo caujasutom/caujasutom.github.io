@@ -97,33 +97,99 @@ div.navbar div.social {
   align-items: center;
   width: 100%;
 }
-div.content {
+div.main {
   width: 100%;
-  display: grid;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
-  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-div.container {
+section.main {
+  overflow: hidden;
+  position: relative;
   height: 100vh;
   backdrop-filter: blur(100px);
 }
-div.container h1 {
+section.main::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+}
+section.main h1 {
   margin: 0;
   text-align: center;
 }
-div.container2 {
+section.page {
   height: 100vh;
   display: grid;
   align-content: center;
   justify-items: center;
   width: 75%;
 }
+div.content {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 2.5%;
+  box-shadow: 5px 5px 15px -5px #000000;
+}
+div.content div.informace {
+  width: 50%;
+  display: grid;
+  align-items: center;
+}
+div.informace p {
+  margin: 1%;
+}
+div.content > img {
+  margin: 1%;
+}
+div.content img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+section.main div.text {
+  margin: 5% auto 5% auto;
+  width: 70%;
+  text-align: center;
+}
+section.main div.text h1 {
+  font-size: 5em;
+  color: white;
+}
+section.main p {
+  text-align: justify;
+  color: white;
+}
+a.tlacitko img {
+  margin: 35% 0 0 0;
+  animation: animace_tlacitko 1s infinite alternate;
+  width: 10%;
+  filter: brightness(0) invert(1);
+}
 footer {
   width: 100%;
   height: 15vh;
   background-color: var(--sekundarnibarva);
+}
+@media only screen and (max-width: 1400px) {
+  div.navbar:hover {
+    width: 35%;
+  }
+  div.social img {
+    width: 45px;
+    height: 45px;
+  }
 }
 @media only screen and (min-width: 1100px) {
   div.hamburger-menu {
@@ -140,18 +206,23 @@ footer {
   }
   div.social a {
     display: flex;
+    justify-content: space-around;
+  }
+  div.main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  section {
+    scroll-snap-align: start;
   }
 }
-@media only screen and (max-width: 1000px) {
-  body,
-  html {
-    scroll-padding: 5rem;
-  }
+@media only screen and (max-width: 1100px) {
   div.navbar {
     z-index: 90;
     position: fixed;
+    top: 0;
     width: 100%;
-    height: 5em;
+    height: 3.5em;
   }
   div.navbar:hover {
     width: 100%;
@@ -169,12 +240,12 @@ footer {
     justify-content: space-between;
   }
   div.navbar img#logo {
-    width: 75px;
-    height: 75px;
-    margin: 2rem;
+    width: 55px;
+    height: 55px;
+    margin: 0 1rem 0 1rem;
   }
   .hamburger-menu {
-    margin: 2rem;
+    margin: 0 1rem 0 1rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -192,15 +263,41 @@ footer {
     transform-origin: left;
     transition: all 0.5s;
   }
-  div.container {
+  div.social img {
+    width: 45px;
+    height: 45px;
+  }
+  section.main {
     height: 100vh;
   }
-  div.container2 {
+  section.page {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 10px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  section.main::before {
+    background-image: url("../Obrazky/Kocky/kocka_0.jpg");
+  }
+  section.main div.text h1 {
+    margin: 30% 0 0 0;
+    font-size: 2em;
+    color: white;
+  }
+  a.tlacitko img {
+    margin: 80% 0 0 0;
+    animation: animace_tlacitko 1s infinite alternate;
+    width: 10%;
+    filter: brightness(0) invert(1);
+  }
+  div.content {
+    width: 80%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 }
