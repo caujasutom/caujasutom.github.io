@@ -1,3 +1,122 @@
+div.text {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 10% 20% auto;
+}
+div.text p {
+  grid-area: 2/1;
+}
+div.text h1 {
+  grid-area: 1/1;
+}
+div.text div.list {
+  grid-area: 3/1;
+}
+section.main div.list {
+  display: flex;
+  flex-direction: column;
+}
+section.main div.list a {
+  font-weight: bolder;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 14px 16px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: auto;
+}
+div.list:hover:after {
+  transform: scaleX(1);
+}
+div.list a:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px var(--sekundarnibarva);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+div.list a:hover:after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
 section.main::before {
-  background-image: url("../Obrazky/Kocky/kocka_4.jpg");
+  background-image: url(../Obrazky/Kocky/kocka_4.jpg);
+}
+div.content {
+  flex-direction: column;
+  align-items: normal;
+  background-color: #f7f5f5;
+}
+div.content a {
+  color: var(--sekundarnibarva);
+  width: 10%;
+}
+iframe.mapa {
+  margin-block: 1%;
+  border: 0;
+  outline: 0;
+  height: 300px;
+  width: 100%;
+}
+table,
+table td {
+  border: 1px solid #f7f5f5;
+  padding: 5px;
+}
+table,
+table td,
+table th {
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+}
+table:hover {
+  cursor: default;
+}
+table th {
+  border: 1px solid var(--primarnibarva);
+  background: var(--primarnibarva);
+  color: #fff;
+}
+table td {
+  text-align: center;
+  background: #fff;
+  transition: 0.5s;
+}
+td:first-child {
+  border: 1px solid #bf9270;
+  color: #fff;
+  background: #bf9270;
+}
+tbody tr:hover td:not(:first-child) {
+  background-color: #dbd9d9;
+}
+tbody tr td:not(:first-child):hover {
+  background-color: var(--primarnibarva);
+  color: #fff;
+  transform: translate3d(6px, -6px, 0);
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+div.content p,
+h2,
+h3 {
+  margin: 0.5%;
+}
+div.content-nadpis {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+div.content-nadpis img {
+  width: 30px;
+  height: 30px;
+}
+div.fb-page {
+  display: grid;
+  justify-content: center;
 }

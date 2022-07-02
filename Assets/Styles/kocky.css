@@ -1,36 +1,40 @@
-section.main::before {
-  background-image: url("../Obrazky/Kocky/kocka_3.jpg");
-}
-
-@keyframes animace_tlacitko {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-25px);
-  }
+section.main:before {
+  background-image: url(../Obrazky/Kocky/kocka_3.jpg);
 }
 section.main div.text h1 {
+  color: #fff;
   font-size: 5em;
-  color: white;
 }
 section.main p {
+  color: #fff;
   text-align: justify;
-  color: white;
 }
 div.content img {
-  box-shadow: -15px -15px 0px 1px var(--sekundarnibarva);
+  box-shadow: -15px -15px 0 1px var(--sekundarnibarva);
+  background-color: #fff;
+}
+div.content div.informace {
+  align-items: center;
+  display: grid;
+  width: 50%;
+}
+div.content > img,
+div.informace p {
+  margin: 1%;
 }
 @media only screen and (max-width: 1215px) {
   div.content {
     width: 75%;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
+  section.page {
+    margin-block: 25%;
+  }
   div.content img {
-    width: 200px;
+    box-shadow: -15px -15px 0 1px var(--sekundarnibarva);
     height: 225px;
     object-fit: cover;
-    box-shadow: -15px -15px 0px 1px var(--sekundarnibarva);
+    width: 200px;
   }
 }

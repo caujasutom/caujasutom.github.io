@@ -1,0 +1,6 @@
+section.main {
+  width: 100%;
+}
+section.main:before {
+  background-image: url("../Obrazky/Kocky/kocka_3.jpg");
+}
