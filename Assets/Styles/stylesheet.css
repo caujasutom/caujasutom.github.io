@@ -145,12 +145,6 @@ div.content {
   padding: 2.5%;
   width: 90%;
 }
-
-div.content img {
-  height: 350px;
-  object-fit: cover;
-  width: 350px;
-}
 section.main div.text {
   margin: 5% auto;
   text-align: center;
@@ -228,6 +222,11 @@ div.nahoru:hover {
   section {
     scroll-snap-align: start;
   }
+  div.content img {
+    height: 350px;
+    object-fit: cover;
+    width: 350px;
+  }
 }
 @media only screen and (max-width: 1100px) {
   div.navbar,
@@ -235,8 +234,7 @@ div.nahoru:hover {
   div.top {
     width: 100%;
   }
-  div.top,
-  section.page {
+  div.top {
     align-content: center;
     display: flex;
   }
@@ -286,12 +284,6 @@ div.nahoru:hover {
   section.main {
     height: 100vh;
   }
-  section.page {
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: 10px;
-  }
 }
 @media only screen and (max-width: 1000px) {
   section.main:before {
@@ -299,9 +291,12 @@ div.nahoru:hover {
   }
   section.main div.text h1 {
     color: #fff;
-    font-size: 2em;
-    margin: 30% 0 0;
+    font-size: 4em;
   }
+  section.main div.text div.list {
+    justify-content: center;
+  }
+
   a.tlacitko img {
     animation: animace_tlacitko 1s infinite alternate;
     filter: brightness(0) invert(1);
@@ -316,5 +311,15 @@ div.nahoru:hover {
   }
   div.main {
     margin-top: 3.5em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section.main div.text h1 {
+    color: #fff;
+    font-size: 3em;
+  }
+  section.main div.text p {
+    color: #fff;
+    font-size: .8em;
   }
 }
