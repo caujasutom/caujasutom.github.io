@@ -1,5 +1,5 @@
 section.main:before {
-  background-image: url(../Obrazky/Kocky/kocka_3.jpg);
+  background-image: url(https://caujasutom.github.io/Assets/Obrazky/Kocky/kocka_3.jpg);
 }
 section.main div.text h1 {
   color: #fff;
@@ -45,6 +45,6 @@ div.informace p {
     z-index: 100;
   }
   div.pribeh-container div.vice > * {
-    transition: .4s;
+    transition: 0.4s;
   }
 }

@@ -2,7 +2,7 @@ section.main {
   width: 100%;
 }
 section.main:before {
-  background-image: url("../Obrazky/Kocky/kocka_4.jpg");
+  background-image: url(https://caujasutom.github.io/Assets/Obrazky/Kocky/kocka_4.jpg);
 }
 section#page {
   width: 100%;
@@ -21,13 +21,12 @@ section#page {
   border-radius: 25px;
 }
 section#page .g1 {
-  color: white;
-  grid-area: 1 / 1;
+  color: #fff;
+  grid-area: 1/1;
 }
 section#page .g2 {
-  color: white;
-
-  grid-area: 2 / 2;
+  color: #fff;
+  grid-area: 2/2;
 }
 div.content {
   flex-wrap: unset;

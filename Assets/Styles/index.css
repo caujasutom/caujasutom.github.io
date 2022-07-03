@@ -42,7 +42,7 @@ div.list a:hover:after {
   transform-origin: 0 50%;
 }
 section.main::before {
-  background-image: url(../Obrazky/Kocky/kocka_4.jpg);
+  background-image: url(https://caujasutom.github.io/Assets/Obrazky/Kocky/kocka_4.jpg);
 }
 div.content {
   flex-direction: column;
@@ -115,8 +115,4 @@ div.content-nadpis {
 div.content-nadpis img {
   width: 30px;
   height: 30px;
-}
-div.fb-page {
-  display: grid;
-  justify-content: center;
 }

@@ -32,7 +32,6 @@ html {
   );
   margin: 0;
 }
-
 div.main,
 div.navbar,
 div.navbar li,
@@ -175,7 +174,7 @@ div.nahoru {
   width: 50px;
   height: 50px;
   transition: 0.5s;
-  color: white;
+  color: #fff;
 }
 div.nahoru:hover {
   cursor: pointer;
@@ -287,7 +286,7 @@ div.nahoru:hover {
 }
 @media only screen and (max-width: 1000px) {
   section.main:before {
-    background-image: url(../Obrazky/Kocky/kocka_0.jpg);
+    background-image: url(https://caujasutom.github.io/Assets/Obrazky/Kocky/kocka_0.jpg);
   }
   section.main div.text h1 {
     color: #fff;
@@ -296,7 +295,6 @@ div.nahoru:hover {
   section.main div.text div.list {
     justify-content: center;
   }
-
   a.tlacitko img {
     animation: animace_tlacitko 1s infinite alternate;
     filter: brightness(0) invert(1);
@@ -320,6 +318,6 @@ div.nahoru:hover {
   }
   section.main div.text p {
     color: #fff;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
