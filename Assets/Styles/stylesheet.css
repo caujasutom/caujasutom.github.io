@@ -64,10 +64,6 @@ div.navbar li {
 div.navbar li > * {
   margin: 0 0.5em;
 }
-div.navbar li img {
-  height: 40px;
-  width: 40px;
-}
 div.navbar a {
   color: #ffffff80;
   display: none;
@@ -188,8 +184,16 @@ div.nahoru:hover {
     height: 35px;
     width: 35px;
   }
+  div.navbar li img {
+    height: 40px;
+    width: 40px;
+  }
 }
 @media only screen and (min-width: 1100px) {
+  div.navbar li img {
+    height: 32px;
+    width: 32px;
+  }
   div.hamburger-menu {
     display: none;
   }
@@ -278,7 +282,7 @@ div.nahoru:hover {
   section.page {
     height: auto;
     margin: 10%;
-    width: 95%
+    width: 95%;
   }
 }
 @media only screen and (max-width: 1000px) {
