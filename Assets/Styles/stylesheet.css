@@ -216,7 +216,7 @@ div.nahoru:hover {
   }
   section {
     scroll-snap-align: start;
-  }
+  } 
   div.content img {
     height: 350px;
     object-fit: cover;
@@ -307,6 +307,7 @@ div.nahoru:hover {
     flex-wrap: nowrap;
     justify-content: center;
     width: 95%;
+
   }
   div.main {
     margin-top: 3.5em;
