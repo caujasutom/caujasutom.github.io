@@ -22,14 +22,6 @@
 }
 body,
 html {
-  background-image: linear-gradient(
-    to right bottom,
-    #dedede,
-    #e6e6e6,
-    #eee,
-    #f7f7f7,
-    #fff
-  );
   margin: 0;
 }
 div.main,
@@ -283,6 +275,11 @@ div.nahoru:hover {
   section.main {
     height: 100vh;
   }
+  section.page {
+    height: auto;
+    margin: 10%;
+    width: 95%
+  }
 }
 @media only screen and (max-width: 1000px) {
   section.main:before {
@@ -305,7 +302,7 @@ div.nahoru:hover {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    width: 80%;
+    width: 95%;
   }
   div.main {
     margin-top: 3.5em;
